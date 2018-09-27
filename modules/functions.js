@@ -37,14 +37,11 @@ module.exports = bot => {
     console.log(`[${type}] [${title}]${msg}`);
   };
 
-  /* MISCELANEOUS NON-CRITICAL FUNCTIONS */
+  // Fonctions basiques
 
-  // `await wait(1000);` to "pause" for 1 second.
+  // Ajouter `await wait(1000);` pour faire une pause d'une seconde
   global.wait = require('util').promisify(setTimeout);
 
-  // Another semi-useful utility command, which creates a "range" of numbers
-  // in an array. `range(10).forEach()` loops 10 times for instance. Why?
-  // Because honestly for...i loops are ugly.
   global.range = (count, start = 0) => {
     const myArr = [];
     for (var i = 0; i < count; i++) {
@@ -53,7 +50,7 @@ module.exports = bot => {
     return myArr;
   };
 
-  // These 2 simply handle unhandled things. Like Magic. /shrug
+  // Amélioration des messages d'erreurs
   process.on('uncaughtException', err => {
     let errorMsg = err.stack.replace(new RegExp(`${__dirname}\/`, 'g'), './');
     console.error('Uncaught Exception: ', errorMsg);
