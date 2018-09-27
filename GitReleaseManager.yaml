@@ -1,11 +1,11 @@
 # create:
-#   include-footer: true
+#   include-footer: false
 #   footer-heading: Où pouvez-vous nous trouver ?
 #   footer-content: Rejoignez-nous sur [Discord](https://discord.gg/FADJwNS)
 #   footer-includes-milestone: false
 #   milestone-replace-text: '{milestone}'
 # export:
-#   include-created-date-in-title: true
+#   include-created-date-in-title: false
 #   created-date-string-format: dd MMMM, yyyy
 #   perform-regex-removal: false
 #   regex-text: '### Where to get it(\r\n)*You can .*\)'
