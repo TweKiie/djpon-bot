@@ -1,9 +1,10 @@
 exports.run = async (bot, msg, args) => {
   msg.channel
     .send(
-      'Lien vers le bot : https://github.com/gCKn/djpon-bot (se supprime automatiquement après 20 secondes.'
+      'Lien vers le bot : https://github.com/gCKn/djpon-bot (se supprime automatiquement après 20 secondes).'
     )
     .then(msg => msg.delete(20000));
+  msg.delete();
 };
 
 exports.conf = {
@@ -15,6 +16,6 @@ exports.conf = {
 
 exports.help = {
   name: 'bot',
-  description: 'Commande pour renvoyer le lien vers le code source du bot',
+  description: 'Commande pour renvoyer le lien vers le code source du bot.',
   usage: 'bot'
 };

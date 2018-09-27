@@ -34,6 +34,6 @@ exports.conf = {
 
 exports.help = {
   name: 'kick',
-  description: 'Commande pour renvoyer un utilisateur de votre serveur',
+  description: 'Commande pour renvoyer un utilisateur de votre serveur.',
   usage: 'kick <@pseudo> <raison>'
 };

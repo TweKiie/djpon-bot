@@ -38,6 +38,6 @@ exports.conf = {
 
 exports.help = {
   name: 'ban',
-  description: 'Commande pour bannir un utilisateur de votre serveur',
+  description: 'Commande pour bannir un utilisateur de votre serveur.',
   usage: 'ban <@pseudo> <raison>'
 };
