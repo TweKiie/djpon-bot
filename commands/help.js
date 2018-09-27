@@ -26,7 +26,7 @@ exports.run = (bot, message, params, level) => {
       message.channel.send(
         `= ${command.help.name} = \n${
           command.help.description
-        }\nUtilisation -> z:${command.help.usage} <nombre de messages>`,
+        }\nUtilisation -> z:${command.help.usage}`,
         { code: 'asciidoc' }
       );
     }

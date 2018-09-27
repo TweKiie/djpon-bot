@@ -25,8 +25,8 @@ bot.aliases = new Discord.Collection();
   });
 
   // Event loader
-  const evtFiles = await readdir('./events/');
-  evtFiles.forEach(file => {
+  const eventFiles = await readdir('./events/');
+  eventFiles.forEach(file => {
     const eventName = file.split('.')[0];
     const event = require(`./events/${file}`);
     bot.on(eventName, event.bind(null, bot));

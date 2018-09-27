@@ -1,0 +1,18 @@
+# create:
+#   include-footer: true
+#   footer-heading: Où pouvez-vous nous contacter ?
+#   footer-content: Vous pouvez accéder directement à notre [Discord](https://discord.gg/nfrrx4R)
+#   footer-includes-milestone: false
+#   milestone-replace-text: '{milestone}'
+# export:
+#   include-created-date-in-title: true
+#   created-date-string-format: dd MMMM, yyyy
+#   perform-regex-removal: false
+#   regex-text: '### Where to get it(\r\n)*You can .*\)'
+#   multiline-regex: false
+# issue-labels-include:
+# - Bug
+# - Amélioration
+# - Fonctionnalité
+# issue-labels-exclude:
+# - Internal Refactoring

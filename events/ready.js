@@ -3,7 +3,7 @@ module.exports = async bot => {
 
   bot.log(
     'log',
-    `Prêt à espionner ${bot.users.size} utilisateurs sur ${
+    ` Prêt à espionner ${bot.users.size} utilisateurs sur ${
       bot.channels.size
     } salons.`,
     'Prêt!'
@@ -11,7 +11,7 @@ module.exports = async bot => {
 
   bot.user.setPresence({
     game: {
-      name: 'at getCodingKnowledge.com',
+      name: 'with Alex | z:help',
       type: 'PLAYING'
     },
     status: 'idle'
