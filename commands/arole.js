@@ -29,7 +29,8 @@ exports.run = async (bot, msg, args) => {
   if (
     roleToAdd === 'instructeur' ||
     roleToAdd === 'modérateur' ||
-    roleToAdd === 'moderateur'
+    roleToAdd === 'moderateur' ||
+    roleToAdd === 'patron'
   ) {
     msg.channel
       .send(`Bien essayé ${memberRole}, la sanction est à venir ;)`)
