@@ -1,7 +1,7 @@
 # create:
 #   include-footer: true
-#   footer-heading: Où pouvez-vous nous contacter ?
-#   footer-content: Vous pouvez accéder directement à notre [Discord](https://discord.gg/nfrrx4R)
+#   footer-heading: Où pouvez-vous nous trouver ?
+#   footer-content: Rejoignez-nous sur [Discord](https://discord.gg/FADJwNS)
 #   footer-includes-milestone: false
 #   milestone-replace-text: '{milestone}'
 # export:
@@ -12,7 +12,7 @@
 #   multiline-regex: false
 # issue-labels-include:
 # - Bug
-# - Amélioration
-# - Fonctionnalité
+# - Feature
+# - Improvement
 # issue-labels-exclude:
 # - Internal Refactoring
