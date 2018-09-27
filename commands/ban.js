@@ -20,13 +20,13 @@ exports.run = async (bot, msg, args) => {
     .addField('Channel', msg.channel)
     .addField('Raison', banReason);
 
-  let kickChannel = msg.guild.channels.find(`name`, 'me');
+  let banChannel = msg.guild.channels.find(`name`, 'me');
 
   msg.guild
     .member(bannedUser)
-    .kick(banReason)
+    .ban(banReason)
     .then(msg => msg.delete(5000));
-  kickChannel.send(kickEmbed);
+  banChannel.send(kickEmbed);
 };
 
 exports.conf = {
