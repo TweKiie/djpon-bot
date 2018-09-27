@@ -1,0 +1,7 @@
+{
+  "ownerID": "yourID",
+  "token": "yourToken",
+  "prefix": "yourPrefix",
+  "modRoleName": "modRole",
+  "adminRoleName": "instRole"
+}
