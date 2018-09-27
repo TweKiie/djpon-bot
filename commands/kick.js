@@ -5,6 +5,8 @@ exports.run = async (bot, msg, args) => {
     msg.mentions.users.first() || msg.guild.members.get(args[0])
   );
   let kickReason = args.join(' ').slice(22);
+  if (kickedUser.hasPermission('MANAGE_MESSAGES'))
+    return message.channel.send('Vous ne pouvez pas kicker cette personne !');
 
   let kickEmbed = new Discord.RichEmbed()
     .setDescription('Reports')
@@ -16,7 +18,10 @@ exports.run = async (bot, msg, args) => {
 
   let kickChannel = msg.guild.channels.find(`name`, 'me');
 
-  msg.guild.member(kickedUser).kick(kickReason);
+  msg.guild
+    .member(kickedUser)
+    .kick(kickReason)
+    .then(msg => msg.delete(5000));
   kickChannel.send(kickEmbed);
 };
 
