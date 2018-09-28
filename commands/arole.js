@@ -2,7 +2,10 @@ exports.run = async (bot, msg, args) => {
   let memberRole = msg.guild.member(msg.author);
 
   let roleToAdd = args[0];
-  if (!roleToAdd) return msg.channel.send('Spécifier un rôle !');
+  if (!roleToAdd)
+    return msg.channel
+      .send('Spécifier un rôle !')
+      .then(msg => msg.delete(2000));
 
   if (roleToAdd === 'htmlcss') {
     var role = msg.guild.roles.find(x => x.name === 'HTML-CSS');
@@ -32,9 +35,7 @@ exports.run = async (bot, msg, args) => {
     roleToAdd === 'moderateur' ||
     roleToAdd === 'patron'
   ) {
-    msg.channel
-      .send(`Bien essayé ${memberRole}, la sanction est à venir ;)`)
-      .then(msg => msg.delete(3000));
+    msg.channel.send(`Bien essayé ${memberRole}, la sanction est à venir ;)`);
   } else {
     msg.channel
       .send(
