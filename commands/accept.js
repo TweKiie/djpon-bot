@@ -1,12 +1,5 @@
 exports.run = async (bot, msg, args) => {
-  let memberRole = msg.guild.member(
-    msg.mentions.users.first() || msg.guild.members.get(args[0])
-  );
-  if (!memberRole) {
-    return msg.channel.send(
-      "Tu n'as pas bien mentionné ton pseudo, voici la sytaxe : @ton-pseudo (ex: @Alex)."
-    );
-  }
+  let memberRole = msg.guild.member(msg.author);
   if (msg.member.hasPermission('ADD_REACTIONS')) {
     return msg.channel.send(
       'Vous ne pouvez pas utilser cette commande deux fois de suite !'
