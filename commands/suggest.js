@@ -17,6 +17,6 @@ exports.conf = {
 exports.help = {
   name: 'suggest',
   description:
-    'Commande renvoyant vers les suggestions/issues de GitHub (si vous avez une suggestion concernant le bot).',
+    'Commande renvoyant vers les suggestions/issues de GitHub (si vous avez une suggestion concernant le bot ou si vous trouvez un bug le concernant).',
   usage: 'suggest'
 };
