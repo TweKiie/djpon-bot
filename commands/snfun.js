@@ -11,7 +11,7 @@ Système de monnaie :: https://gist.github.com/gCKn/5ac523a14be8d15d856b1411958f
 Commande chuck :: https://gist.github.com/gCKn/c8cdd95e24b324c835c717922fe468ae
 Commande clope :: https://gist.github.com/gCKn/5147bc15961f06cacca5346f2834dd32
 Commande ascii :: https://gist.github.com/gCKn/fb7fddf10255837e9bdc19ffc6e82589\n
-= Snippets par Spookloo =\n
+= Snippets par Spokloo =\n
 Commande google :: https://gist.github.com/gCKn/32ed100fb42e7e8ca6ad385f484883aa  
 Commande youtube :: https://gist.github.com/gCKn/2fe512c37e9f0969352c4baf5631889a
 Commande wiki :: https://gist.github.com/gCKn/50ea679ad20c086b77563aa168a6b0fb

@@ -1,6 +1,6 @@
 {
   "name": "djpon-bot",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Bot djpon du discord de gCKn",
   "main": "main.js",
   "scripts": {
