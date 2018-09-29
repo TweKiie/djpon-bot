@@ -3,9 +3,10 @@ exports.run = async (bot, msg, args) => {
     `= Commandes fun =\n
 = Snippets par Alex =\n
 Commande cat :: https://gist.github.com/gCKn/1c939f9992434a7ce2252e7ca7fb12be
+Commande dog :: https://gist.github.com/gCKn/278c836283b53ddd800beffbb50564a3
+Commande ask :: https://gist.github.com/gCKn/08dd4aee851ba27b25e9d2aca49bc4d1
 Système d'expérience :: https://gist.github.com/gCKn/c3cbdd55e61e3bf3bf9dd1a3999cdbe5
-Système de monnaie :: https://gist.github.com/gCKn/5ac523a14be8d15d856b1411958f17c8
-Commande dog :: https://gist.github.com/gCKn/278c836283b53ddd800beffbb50564a3\n
+Système de monnaie :: https://gist.github.com/gCKn/5ac523a14be8d15d856b1411958f17c8\n
 = Snippets par Kam3leøN =\n
 Commande chuck :: https://gist.github.com/gCKn/c8cdd95e24b324c835c717922fe468ae
 Commande clope :: https://gist.github.com/gCKn/5147bc15961f06cacca5346f2834dd32
