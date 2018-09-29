@@ -1,22 +1,22 @@
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 
 exports.run = async (bot, msg, args) => {
-  let kickedUser = msg.guild.member(
+  const kickedUser = msg.guild.member(
     msg.mentions.users.first() || msg.guild.members.get(args[0])
   );
-  let kickReason = args.join(' ').slice(22);
-  if (kickedUser.hasPermission('MANAGE_MESSAGES'))
-    return message.channel.send('Vous ne pouvez pas kicker cette personne !');
+  const kickReason = args.join(" ").slice(22);
+  if (kickedUser.hasPermission("MANAGE_MESSAGES"))
+    return msg.channel.send("Vous ne pouvez pas kicker cette personne !");
 
-  let kickEmbed = new Discord.RichEmbed()
-    .setDescription('Reports')
-    .setColor('#dc143c')
-    .addField('Utilisateur kické', `${kickedUser} (ID: ${kickedUser.id})`)
-    .addField('Utilisateur ayant kické', `${msg.author} (ID: ${msg.author.id})`)
-    .addField('Channel', msg.channel)
-    .addField('Raison', kickReason);
+  const kickEmbed = new Discord.RichEmbed()
+    .setDescription("Reports")
+    .setColor("#dc143c")
+    .addField("Utilisateur kické", `${kickedUser} (ID: ${kickedUser.id})`)
+    .addField("Utilisateur ayant kické", `${msg.author} (ID: ${msg.author.id})`)
+    .addField("Channel", msg.channel)
+    .addField("Raison", kickReason);
 
-  let kickChannel = msg.guild.channels.find(`name`, 'me');
+  const kickChannel = msg.guild.channels.find("name", "me");
 
   msg.guild
     .member(kickedUser)
@@ -33,7 +33,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'kick',
-  description: 'Commande pour renvoyer un utilisateur de votre serveur.',
-  usage: 'kick <@pseudo> <raison>'
+  name: "kick",
+  description: "Commande pour renvoyer un utilisateur de votre serveur.",
+  usage: "kick <@pseudo> <raison>"
 };

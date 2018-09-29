@@ -1,19 +1,17 @@
 module.exports = async bot => {
-  await wait(1000);
-
   bot.log(
-    'log',
+    "log",
     ` Prêt à espionner ${bot.users.size} utilisateurs sur ${
       bot.channels.size
     } salons.`,
-    'Prêt!'
+    "Prêt!"
   );
 
   bot.user.setPresence({
     game: {
-      name: 'with Alex | z:help',
-      type: 'PLAYING'
+      name: "with Alex | z:help",
+      type: "PLAYING"
     },
-    status: 'idle'
+    status: "idle"
   });
 };

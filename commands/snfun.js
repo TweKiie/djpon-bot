@@ -1,4 +1,4 @@
-exports.run = async (bot, msg, args) => {
+exports.run = async (bot, msg) => {
   msg.channel.send(
     `= Commandes fun =\n
 = Snippets par Alex =\n
@@ -21,7 +21,7 @@ Commande anime :: https://gist.github.com/gCKn/53048e8b77b18fd0c133e5ec9ea33f39\
 Commande fight :: https://gist.github.com/gCKn/b7f5552870ab827022021449d60fe516
 Commande choose :: https://gist.github.com/gCKn/7ca7a3754b701704c36c8841175c62ba
 Commande deviner :: https://gist.github.com/gCKn/d410e3a992b5651cf19560b42cc67b34`,
-    { code: 'asciidoc' }
+    { code: "asciidoc" }
   );
 };
 
@@ -33,8 +33,8 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'snfun',
+  name: "snfun",
   description:
-    'Commande pour renvoyer toutes les commandes fun créaient jusque maintenant.',
-  usage: 'snfun'
+    "Commande pour renvoyer toutes les commandes fun créaient jusque maintenant.",
+  usage: "snfun"
 };

@@ -14,7 +14,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'clear',
-  description: 'Commande pour nettoyer un nombre de messages spécifiés.',
-  usage: 'clear'
+  name: "clear",
+  description: "Commande pour nettoyer un nombre de messages spécifiés.",
+  usage: "clear"
 };

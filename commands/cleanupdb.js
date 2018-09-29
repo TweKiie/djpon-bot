@@ -21,8 +21,8 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'cleanupdb',
+  name: "cleanupdb",
   description:
     "Nettoyer la base de données des utilisateurs n'ayant pas parlé depuis 1 mois.",
-  usage: 'cleanupdb'
+  usage: "cleanupdb"
 };

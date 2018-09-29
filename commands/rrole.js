@@ -1,29 +1,31 @@
 exports.run = async (bot, msg, args) => {
-  let memberRole = msg.guild.member(msg.author);
+  const memberRole = msg.guild.member(msg.author);
   if (!memberRole) {
     return msg.channel.send("L'utilisateur n'existe pas !");
   }
 
-  let roleToAdd = args[0];
-  if (!roleToAdd) return msg.channel.send('Spécifier un rôle');
+  const roleToAdd = args[0];
+  if (!roleToAdd) return msg.channel.send("Spécifier un rôle");
 
-  if (roleToAdd === 'htmlcss') {
-    var role = msg.guild.roles.find(x => x.name === 'HTML-CSS');
+  var role;
+
+  if (roleToAdd === "htmlcss") {
+    role = msg.guild.roles.find(x => x.name === "HTML-CSS");
     memberRole.removeRole(role.id);
-  } else if (roleToAdd === 'javascript') {
-    var role = msg.guild.roles.find(x => x.name === 'Javascript');
+  } else if (roleToAdd === "javascript") {
+    role = msg.guild.roles.find(x => x.name === "Javascript");
     memberRole.removeRole(role.id);
-  } else if (roleToAdd === 'ruby') {
-    var role = msg.guild.roles.find(x => x.name === 'Ruby');
+  } else if (roleToAdd === "ruby") {
+    role = msg.guild.roles.find(x => x.name === "Ruby");
     memberRole.removeRole(role.id);
-  } else if (roleToAdd === 'discordbot') {
-    var role = msg.guild.roles.find(x => x.name === 'Discord-bot');
+  } else if (roleToAdd === "discordbot") {
+    role = msg.guild.roles.find(x => x.name === "Discord-bot");
     memberRole.removeRole(role.id);
-  } else if (roleToAdd === 'laravel') {
-    var role = msg.guild.roles.find(x => x.name === 'Laravel');
+  } else if (roleToAdd === "laravel") {
+    role = msg.guild.roles.find(x => x.name === "Laravel");
     memberRole.removeRole(role.id);
   } else {
-    msg.channel.send('Rôle introuvable ou non autorisé.');
+    msg.channel.send("Rôle introuvable ou non autorisé.");
   }
 
   msg.delete();
@@ -42,7 +44,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'rrole',
-  description: 'Commande pour enlever un role.',
-  usage: 'rrole <role>'
+  name: "rrole",
+  description: "Commande pour enlever un role.",
+  usage: "rrole <role>"
 };

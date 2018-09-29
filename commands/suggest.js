@@ -1,7 +1,7 @@
-exports.run = async (bot, msg, args) => {
+exports.run = async (bot, msg) => {
   msg.channel
     .send(
-      'Lien vers les issues de GitHub : https://github.com/gCKn/djpon-bot/issues (se supprime automatiquement après 20 secondes).'
+      "Lien vers les issues de GitHub : https://github.com/gCKn/djpon-bot/issues (se supprime automatiquement après 20 secondes)."
     )
     .then(msg => msg.delete(20000));
   msg.delete();
@@ -15,7 +15,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'suggest',
-  description: 'Commande renvoyant vers les suggestions/issues de GitHub.',
-  usage: 'suggest'
+  name: "suggest",
+  description: "Commande renvoyant vers les suggestions/issues de GitHub.",
+  usage: "suggest"
 };
