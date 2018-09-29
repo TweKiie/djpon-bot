@@ -20,7 +20,7 @@ exports.run = async (bot, message, args) => {
   message.channel.send(
     `${
       user.tag
-    } a reçu ${pointsToAdd} points et se retrouve maintenant à ${userPoints} points.`
+    } a reçu ${pointsToAdd} points d'expérience et se retrouve maintenant à ${userPoints} points.`
   );
 };
 

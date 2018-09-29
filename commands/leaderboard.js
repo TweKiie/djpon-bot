@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 exports.run = async (bot, message) => {
   const filtered = bot.points.filter(p => p.guild === message.guild.id).array();
   const sorted = filtered.sort((a, b) => a.points - b.points);
-  const top10 = sorted.splice(0, 10).sort();
+  const top10 = sorted.splice(0, 10).reverse();
   const embed = new Discord.RichEmbed()
     .setTitle('Classement')
     .setAuthor(bot.user.username, bot.user.avatarURL)
@@ -28,5 +28,5 @@ exports.conf = {
 exports.help = {
   name: 'leaderboard',
   description: 'Renvoie le classement des 10 premiers utilisateurs.',
-  usage: 'leaderboard'
+  usage: 'leaderboard | z:lead'
 };
