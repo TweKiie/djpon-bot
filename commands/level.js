@@ -4,7 +4,7 @@ exports.run = async (bot, message) => {
     `Tu as actuellement ${bot.points.get(
       key,
       'points'
-    )} points, et tu es niveau ${bot.points.get(key, 'level')}!`
+    )} points d'expérience, et tu es niveau ${bot.points.get(key, 'level')}!`
   );
 };
 
@@ -17,6 +17,6 @@ exports.conf = {
 
 exports.help = {
   name: 'level',
-  description: "Renvoie le niveau actuel de l'utilisateur.",
-  usage: 'level'
+  description: "Renvoie le niveau et les points d'expérience de l'utilisateur.",
+  usage: 'level | z:rank'
 };
