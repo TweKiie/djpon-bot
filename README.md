@@ -2,7 +2,7 @@
 
 # Dj-pon Discord Bot
 
-A la base, le bot `dj-pon` se trouve sur le serveur de l'entreprise getCodingKnowledge.
+À la base, le bot `dj-pon` se trouve sur le serveur de l'entreprise getCodingKnowledge. Si vous avez une question, contactez-nous sur le Discord, les commentaires ne sont pas lus ici.
 
 # Où pouvez-vous nous trouver ?
 
@@ -22,13 +22,13 @@ Si vous décidez d'utiliser notre bot, vous aurez besoin des logiciels suivants 
 
 ### Installation
 
-Une fois que vous avez ces différents logiciel installés, rendez-vous dans votre projet et tapez la commande : `https://github.com/gCKn/djpon-bot.git`
+Une fois que vous avez ces différents logiciel installés, rendez-vous dans votre projet et tapez la commande : `https://github.com/gCKn/djpon-bot.git`.
 
-Ensuite, prenez le fichier `config.json.exemple` et remplacez les informations, voici le fichier en question :
+Ensuite, prenez le fichier `config.json.exemple`, renommez le `config.json` puis remplacez les informations, voici le fichier en question :
 
 ```js
 {
-  "ownerID": "l'ID de l'utilisateur qui a crée le serveur (copy ID sur son pseudo)",
+  "ownerID": "l'ID de l'utilisateur qui a créé le serveur (copy ID sur son pseudo)",
   "token": "le token de votre bot",
   "prefix": "le prefixe de votre bot",
   "modRoleName": "le rôle de modérateur",
@@ -36,9 +36,9 @@ Ensuite, prenez le fichier `config.json.exemple` et remplacez les informations, 
 }
 ```
 
-Une fois que vous avez terminé cette configuration, vous pouvez simplement tapez la commande `npm i`.
+Une fois que vous avez terminé cette configuration, vous pouvez simplement taper la commande `npm i`.
 
-Et c'est terminé ! Tapez `node main.js` pour lancer le bot.
+Et c'est terminé ! Tapez la commande `node main.js` dans le terminal pour lancer le bot.
 
 ## Coder avec
 
@@ -51,7 +51,7 @@ Pour connaître les différentes commandes de notre projet, vous pouvez vous ren
 
 ## Historique de version
 
-Pour retrouver un historique de nos versions, regardez directement les [tags du repository](https://github.com/gCKn/djpon-bot/tags)
+Pour retrouver un historique de nos versions, regardez directement les [tags du repository](https://github.com/gCKn/djpon-bot/tags).
 
 ## Auteurs
 
@@ -59,4 +59,4 @@ Pour retrouver un historique de nos versions, regardez directement les [tags du 
 
 ## License
 
-Ce projet est enregistré sous une license MIT - vous pouvez retrouver plus d'informations sur notre fichier [license](https://github.com/gCKn/djpon-bot/blob/master/LICENSE.md)
+Ce projet est enregistré sous une licence MIT - vous pouvez retrouver plus d'informations sur notre fichier [license](https://github.com/gCKn/djpon-bot/blob/master/LICENSE.md).
