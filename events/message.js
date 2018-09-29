@@ -1,5 +1,25 @@
 module.exports = (bot, message) => {
   if (message.author.bot) return;
+  if (message.guild) {
+    const key = `${message.guild.id}-${message.author.id}`;
+    bot.points.ensure(`${message.guild.id}-${message.author.id}`, {
+      user: message.author.id,
+      guild: message.guild.id,
+      points: 0,
+      level: 1
+    });
+
+    bot.points.inc(key, 'points');
+
+    const curLevel = Math.floor(0.1 * Math.sqrt(bot.points.get(key, 'points')));
+
+    if (bot.points.get(key, 'level') < curLevel) {
+      message.reply(
+        `Tu es monté au niveau **${curLevel}**! Dj-pon te félicite !`
+      );
+      bot.points.set(key, curLevel, 'level');
+    }
+  }
   if (message.content.indexOf(bot.config.prefix) !== 0) return;
 
   const args = message.content.split(/\s+/g);

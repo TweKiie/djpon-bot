@@ -6,6 +6,9 @@ const bot = new Discord.Client();
 bot.config = require('./config.json');
 require('./modules/functions')(bot);
 
+const Enmap = require('enmap');
+bot.points = new Enmap({ name: 'points' });
+
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
 
