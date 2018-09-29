@@ -55,7 +55,7 @@ Pour retrouver un historique de nos versions, regardez directement les [tags du 
 
 ## Auteurs
 
-- **Alexis OLLAND** - _Travaille initial_ - [Alex](https://github.com/gCKn)
+- **Alexis OLLAND** - _Travail initial_ - [Alex](https://github.com/gCKn)
 
 ## License
 
