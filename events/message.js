@@ -9,15 +9,15 @@ module.exports = (bot, message) => {
       level: 1
     });
 
-    bot.points.inc(key, 'points');
+    bot.points.inc(key, "points");
 
-    const curLevel = Math.floor(0.1 * Math.sqrt(bot.points.get(key, 'points')));
+    const curLevel = Math.floor(0.1 * Math.sqrt(bot.points.get(key, "points")));
 
-    if (bot.points.get(key, 'level') < curLevel) {
+    if (bot.points.get(key, "level") < curLevel) {
       message.reply(
         `Tu es monté au niveau **${curLevel}**! Dj-pon te félicite !`
       );
-      bot.points.set(key, curLevel, 'level');
+      bot.points.set(key, curLevel, "level");
     }
   }
   if (message.content.indexOf(bot.config.prefix) !== 0) return;
@@ -29,7 +29,7 @@ module.exports = (bot, message) => {
     .toLowerCase();
 
   // Récupération des permissions
-  let perms = bot.permlevel(message);
+  const perms = bot.permlevel(message);
 
   // Alias ?
   const cmd =
@@ -38,12 +38,12 @@ module.exports = (bot, message) => {
   // Si la commande existe + permission, on lance la commande
   if (cmd && perms >= cmd.conf.permLevel) {
     bot.log(
-      'log',
+      "log",
       `${message.guild.name}/#${message.channel.name}:
       ${message.author.username} (${message.author.id}) ran command ${
-        cmd.help.name
-      }`,
-      'CMD'
+  cmd.help.name
+}`,
+      "CMD"
     );
     cmd.run(bot, message, args, perms);
   }

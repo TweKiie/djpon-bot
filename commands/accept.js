@@ -1,12 +1,12 @@
-exports.run = async (bot, msg, args) => {
-  let memberRole = msg.guild.member(msg.author);
-  if (msg.member.hasPermission('ADD_REACTIONS')) {
+exports.run = async (bot, msg) => {
+  const memberRole = msg.guild.member(msg.author);
+  if (msg.member.hasPermission("ADD_REACTIONS")) {
     return msg.channel.send(
-      'Vous ne pouvez pas utilser cette commande deux fois de suite !'
+      "Vous ne pouvez pas utilser cette commande deux fois de suite !"
     );
   }
 
-  let Accepted = msg.guild.roles.find(x => x.name === 'Accepted');
+  const Accepted = msg.guild.roles.find(x => x.name === "Accepted");
 
   await memberRole.addRole(Accepted);
 
@@ -31,7 +31,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'accept',
-  description: 'Commande pour accepter la charte du serveur.',
-  usage: 'accept <@pseudo>'
+  name: "accept",
+  description: "Commande pour accepter la charte du serveur.",
+  usage: "accept <@pseudo>"
 };

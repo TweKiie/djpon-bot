@@ -1,42 +1,50 @@
 exports.run = async (bot, msg, args) => {
-  let memberRole = msg.guild.member(msg.author);
+  const memberRole = msg.guild.member(msg.author);
 
-  let roleToAdd = args[0];
+  const roleToAdd = args[0];
   if (!roleToAdd)
     return msg.channel
-      .send('Spécifier un rôle !')
+      .send("Spécifier un rôle !")
       .then(msg => msg.delete(2000));
 
-  if (roleToAdd === 'htmlcss') {
-    var role = msg.guild.roles.find(x => x.name === 'HTML-CSS');
+  var role;
+
+  if (roleToAdd === "htmlcss") {
+    role = msg.guild.roles.find(x => x.name === "HTML-CSS");
     memberRole.addRole(role.id);
-  } else if (roleToAdd === 'javascript') {
-    var role = msg.guild.roles.find(x => x.name === 'Javascript');
+  } else if (roleToAdd === "javascript") {
+    role = msg.guild.roles.find(x => x.name === "Javascript");
     memberRole.addRole(role.id);
-  } else if (roleToAdd === 'ruby') {
-    var role = msg.guild.roles.find(x => x.name === 'Ruby');
+  } else if (roleToAdd === "ruby") {
+    role = msg.guild.roles.find(x => x.name === "Ruby");
     memberRole.addRole(role.id);
-  } else if (roleToAdd === 'discordbot') {
-    var role = msg.guild.roles.find(x => x.name === 'Discord-bot');
+  } else if (roleToAdd === "discordbot") {
+    role = msg.guild.roles.find(x => x.name === "Discord-bot");
     memberRole.addRole(role.id);
-  } else if (roleToAdd === 'laravel') {
-    var role = msg.guild.roles.find(x => x.name === 'Laravel');
+  } else if (roleToAdd === "laravel") {
+    role = msg.guild.roles.find(x => x.name === "Laravel");
     memberRole.addRole(role.id);
   } else {
     msg.channel
-      .send('Rôle introuvable ou non autorisé.')
+      .send("Rôle introuvable ou non autorisé.")
       .then(msg => msg.delete(2000));
   }
 
   msg.delete();
   if (
-    roleToAdd === 'instructeur' ||
-    roleToAdd === 'modérateur' ||
-    roleToAdd === 'moderateur' ||
-    roleToAdd === 'patron'
+    roleToAdd === "instructeur" ||
+    roleToAdd === "modérateur" ||
+    roleToAdd === "moderateur" ||
+    roleToAdd === "patron"
   ) {
     msg.channel.send(`Bien essayé ${memberRole}, la sanction est à venir ;)`);
-  } else {
+  } else if (
+    roleToAdd === "htmlcss" ||
+    roleToAdd === "javascript" ||
+    roleToAdd === "ruby" ||
+    roleToAdd === "discordbot" ||
+    roleToAdd === "laravel"
+  ) {
     msg.channel
       .send(
         `Félicitation ${memberRole}, tu as reçu le rôle ${roleToAdd} avec succès !`
@@ -53,7 +61,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'arole',
-  description: 'Commande pour obtenir un role.',
-  usage: 'arole <role>'
+  name: "arole",
+  description: "Commande pour obtenir un role.",
+  usage: "arole <role>"
 };

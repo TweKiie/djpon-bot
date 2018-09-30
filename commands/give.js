@@ -1,10 +1,10 @@
 exports.run = async (bot, message, args) => {
   if (message.author.id !== message.guild.ownerID)
-    return message.reply('Seul Alex peut ajouter des points ;)');
+    return message.reply("Seul Alex peut ajouter des points ;)");
   const user = message.mentions.users.first() || bot.users.get(args[0]);
   if (!user) return message.reply("Il faut mentionner quelqu'un Alex ;");
   const pointsToAdd = parseInt(args[1], 10);
-  if (!pointsToAdd) return message.reply('Combien de points dois-je ajouter ?');
+  if (!pointsToAdd) return message.reply("Combien de points dois-je ajouter ?");
   // Ensure there is a points entry for this user.
   bot.points.ensure(`${message.guild.id}-${user.id}`, {
     user: message.author.id,
@@ -13,10 +13,10 @@ exports.run = async (bot, message, args) => {
     level: 1
   });
   // Get their current points.
-  let userPoints = bot.points.get(`${message.guild.id}-${user.id}`, 'points');
+  let userPoints = bot.points.get(`${message.guild.id}-${user.id}`, "points");
   userPoints += pointsToAdd;
   // And we save it!
-  bot.points.set(`${message.guild.id}-${user.id}`, userPoints, 'points');
+  bot.points.set(`${message.guild.id}-${user.id}`, userPoints, "points");
   message.channel.send(
     `${
       user.tag
@@ -32,7 +32,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'give',
+  name: "give",
   description: "Donner des points d'expérience à un utilisateur.",
-  usage: 'give'
+  usage: "give"
 };

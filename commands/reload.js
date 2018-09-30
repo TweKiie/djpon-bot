@@ -1,6 +1,6 @@
 exports.run = async (bot, msg, args) => {
   if (!args || args.size < 1)
-    return msg.reply(`Must provide a command to reload. Derp.`);
+    return msg.reply("Must provide a command to reload. Derp.");
 
   let command;
   if (bot.commands.has(args[0])) {
@@ -17,7 +17,7 @@ exports.run = async (bot, msg, args) => {
   command = command.help.name;
 
   delete require.cache[require.resolve(`./${command}.js`)];
-  let cmd = require(`./${command}`);
+  const cmd = require(`./${command}`);
   bot.commands.delete(command);
   bot.aliases.forEach((cmd, alias) => {
     if (cmd === command) bot.aliases.delete(alias);
@@ -38,7 +38,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'reload',
-  description: 'Recharge une commande qui a été modifié.',
-  usage: 'reload [command]'
+  name: "reload",
+  description: "Recharge une commande qui a été modifié.",
+  usage: "reload [command]"
 };

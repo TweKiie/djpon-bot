@@ -1,10 +1,10 @@
-![logo](https://getcodingknowledge.com/wp-content/uploads/2018/08/petitLogo.png)
-
 # Dj-pon Discord Bot
+
+![logo](https://getcodingknowledge.com/wp-content/uploads/2018/08/petitLogo.png)
 
 À la base, le bot `dj-pon` se trouve sur le serveur de l'entreprise getCodingKnowledge. Si vous avez une question, contactez-nous sur le Discord, les commentaires ne sont pas lus ici.
 
-# Où pouvez-vous nous trouver ?
+## Où pouvez-vous nous trouver
 
 Rejoignez-nous sur notre [Discord](https://discord.gg/FADJwNS), nous sommes à votre écoute. Vous pouvez aussi nous retrouver directement sur notre [site web](https://getcodingknowledge.com).
 
@@ -22,7 +22,9 @@ Si vous décidez d'utiliser notre bot, vous aurez besoin des logiciels suivants 
 
 ### Installation
 
-Une fois que vous avez ces différents logiciel installés, rendez-vous dans votre projet et tapez la commande : `https://github.com/gCKn/djpon-bot.git`.
+Une fois que vous avez ces différents logiciel installés, rendez-vous dans votre projet et tapez la commande : `git clone https://github.com/gCKn/djpon-bot.git`.
+
+Vous devez aussi installer les différentes dépendances de `enmap`, voici la commande : `npm i -g --add-python-to-path --production windows-build-tools`.
 
 Ensuite, prenez le fichier `config.json.exemple`, renommez le `config.json` puis remplacez les informations, voici le fichier en question :
 
@@ -55,7 +57,7 @@ Pour retrouver un historique de nos versions, regardez directement les [tags du 
 
 ## Auteurs
 
-- **Alexis OLLAND** - _Travaille initial_ - [Alex](https://github.com/gCKn)
+- **Alexis OLLAND** - _Travail initial_ - [Alex](https://github.com/gCKn)
 
 ## License
 

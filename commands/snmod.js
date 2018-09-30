@@ -1,4 +1,4 @@
-exports.run = async (bot, msg, args) => {
+exports.run = async (bot, msg) => {
   msg.channel.send(
     `= Commandes de modération =\n
 = Snippets par Alex =\n
@@ -11,13 +11,15 @@ Commande mute :: https://gist.github.com/gCKn/7317af9c0df7cba660282dd253c72ce3
 Commande kick :: https://gist.github.com/gCKn/76ca9b356489f20aa73c3586504b37fa
 Commande ban :: https://gist.github.com/gCKn/f516fcffcff93f6744c2bddfd62b16fa
 Date française :: https://gist.github.com/gCKn/4c88c5ed62efc05eb268f3927648c422\n
+= Snippets par Spokloo =\n
+Commande cmd :: https://gist.github.com/gCKn/43c9de5bbabb6adeadd7da80da94a2f5\n
 = Snippets par Kam3leøN =\n
 Séparer bot et humain :: https://gist.github.com/gCKn/1a4d53f3a312b9cc57b1496bae6d5ab9\n
 = Snippets par Mehmet =\n
 Commande unmute :: https://gist.github.com/gCKn/b133724da63a4c2f408b9c09d95010d8\n
 = Snippets par vugi99 =\n
 Commande raidmode :: https://gist.github.com/gCKn/7c150b39f608e307b836f0a0c4fd3a59`,
-    { code: 'asciidoc' }
+    { code: "asciidoc" }
   );
 };
 
@@ -29,8 +31,8 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'snmod',
+  name: "snmod",
   description:
-    'Commande pour renvoyer toutes les commandes de modération créaient jusque maintenant.',
-  usage: 'snmod'
+    "Commande pour renvoyer toutes les commandes de modération créaient jusque maintenant.",
+  usage: "snmod"
 };

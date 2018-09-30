@@ -12,12 +12,12 @@ exports.run = (bot, message, params, level) => {
       }help <commandname> pour plus de détails]\n\n${myCommands
         .map(
           c =>
-            `${bot.config.prefix}${c.help.name}${' '.repeat(
+            `${bot.config.prefix}${c.help.name}${" ".repeat(
               longest - c.help.name.length
             )} :: ${c.help.description}`
         )
-        .join('\n')}`,
-      { code: 'asciidoc' }
+        .join("\n")}`,
+      { code: "asciidoc" }
     );
   } else {
     let command = params[0];
@@ -27,7 +27,7 @@ exports.run = (bot, message, params, level) => {
         `= ${command.help.name} = \n${
           command.help.description
         }\nUtilisation -> z:${command.help.usage}`,
-        { code: 'asciidoc' }
+        { code: "asciidoc" }
       );
     }
   }
@@ -36,12 +36,12 @@ exports.run = (bot, message, params, level) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['h', 'halp'],
+  aliases: ["h", "halp"],
   permLevel: 0
 };
 
 exports.help = {
-  name: 'help',
-  description: 'Affiche toutes les commandes disponibles pour votre rang.',
-  usage: 'help [command]'
+  name: "help",
+  description: "Affiche toutes les commandes disponibles pour votre rang.",
+  usage: "help [command]"
 };
