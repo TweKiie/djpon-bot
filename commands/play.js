@@ -14,7 +14,6 @@ exports.run = async (bot, msg, args) => {
     ytdl(args[0], { filter: "audioonly" })
   );
   msg.channel.send(`Musique ajoutée : ${info.title}`);
-  dispatcher;
 };
 
 exports.conf = {

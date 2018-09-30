@@ -19,6 +19,7 @@ Commande manga :: https://gist.github.com/gCKn/ecf4a34d9e4aee0eb07dafdb51813c31
 Commande anime :: https://gist.github.com/gCKn/53048e8b77b18fd0c133e5ec9ea33f39\n
 = Snippets par vugi99 =\n
 Commande fight :: https://gist.github.com/gCKn/b7f5552870ab827022021449d60fe516
+Commande musique :: https://gist.github.com/gCKn/f594d5e4a8a8ccb8e859ccb0e200faf5
 Commande choose :: https://gist.github.com/gCKn/7ca7a3754b701704c36c8841175c62ba
 Commande deviner :: https://gist.github.com/gCKn/d410e3a992b5651cf19560b42cc67b34`,
     { code: "asciidoc" }
